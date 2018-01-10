@@ -431,7 +431,7 @@ object Form2: TForm2
   object Label4: TLabel
     Left = 131
     Top = 255
-    Width = 6
+    Width = 13
     Height = 13
     Caption = '5'
   end
