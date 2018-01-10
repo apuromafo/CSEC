@@ -1,0 +1,96 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Control de Acceso a Sala de ventas'
+  ClientHeight = 330
+  ClientWidth = 710
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 85
+    Width = 136
+    Height = 13
+    Caption = 'Ingresa el C'#243'digo de Acceso'
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 39
+    Width = 36
+    Height = 13
+    Caption = 'Usuario'
+  end
+  object Edit1: TEdit
+    Left = 8
+    Top = 112
+    Width = 137
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 0
+    Text = 'Ingresa el N'#250'mero !!(key)'
+  end
+  object Button1: TButton
+    Left = 40
+    Top = 152
+    Width = 75
+    Height = 25
+    Caption = 'Comprobar'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Left = 170
+    Top = 24
+    Width = 503
+    Height = 233
+    Lines.Strings = (
+      '#####################################'
+      '#   EJERCICIOS EN C.- by Secury.'#9'#'
+      '#   Capa 1'#9#9#9#9#9#9#9'#'
+      '#####################################'
+      ''
+      ''
+      ''
+      
+        '3.) Similar al programa 1, pero en este caso, se controlar'#225'n los' +
+        ' siguientes sucesos:'
+      '  '
+      
+        '  -Se pedir'#225' usuario y clave (existiran 2 usuarios: Administrado' +
+        'r con clave "55201" e Invitado con'
+      '  clave "00100").'
+      
+        '  -Cada usuario tiene su mensaje de acierto. Se deber'#225' validar q' +
+        'ue el usuario existe en los'
+      
+        '  almacenados (se almacenaran en 2 variables), y luego su respec' +
+        'tiva clave (se almacenan en 2 '
+      'variables tambien).'
+      
+        '  -S'#243'lo hay 5 intentos, al 5 se finaliza la ejecuci'#243'n, o, si se ' +
+        'muestra un mensaje de acierto.'
+      ''
+      ''
+      ''
+      '#############################################################'
+      '########################################')
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 8
+    Top = 58
+    Width = 137
+    Height = 21
+    TabOrder = 3
+    Text = 'Usuario!!!!'
+  end
+end

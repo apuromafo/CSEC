@@ -1,0 +1,109 @@
+// ---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit2.h"
+using namespace std;
+
+// ---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+
+// Prototipo de la Función Login.
+
+TForm2 *Form2;
+
+// ---------------------------------------------------------------------------
+__fastcall TForm2::TForm2(TComponent* Owner) : TForm(Owner) {
+}
+
+// ---------------------------------------------------------------------------
+
+void __fastcall TForm2::Button1Click(TObject *Sender) {
+
+	// Initialize String Array
+
+	string users[2] = {"Administrador", "Invitado"};
+	string msj[3] = {"Bienvenido", "Rechazado", "Máximo de Intentos"};
+	string codes[2] = {"55201", "00100"};
+	// si nombre es igual a
+	int cont = Label4->Caption.ToInt();
+	
+	if (cont <= 5) {
+
+		if (Edit2->Text == users[0].c_str() && Edit1->Text == codes[0].c_str()
+			|| Edit2->Text == users[1].c_str() && Edit1->Text == codes[1]
+			.c_str()) {
+			ShowMessage(msj[0].c_str());
+		}
+		else {
+			ShowMessage(msj[1].c_str());
+		Label4->Caption = cont - 1;
+
+		}
+
+	}
+
+	if (cont <= 1) {
+		ShowMessage(msj[2].c_str());
+	}
+}
+
+// usuario   Edit2->Text
+// clave = Edit1->Text.ToInt();
+
+/*
+ // Solicitando Usuario.
+/*
+ *  Función que verifica si el usuario y la pass
+ *  introducida por el usuario existe en el arreglo
+ *  de usuarios y códigos respectivamente.
+ 
+ if (login(chr_user, users, chr_pass, codes)) {
+
+ MessageDlg("Adelante puedes pasar\n", mtInformation,
+ TMsgDlgButtons() << mbOK, 0);
+ }
+ else {
+ // " Acceso NO Permitido \n, ", MB_OK);
+ MessageDlg("[!]  el usuario o el Código incorrecto", mtInformation,
+ TMsgDlgButtons() << mbOK, 0);
+ }
+
+ }
+ while (cont--);
+
+ // " Acceso NO Permitido \n, ", MB_OK);
+ MessageDlg("[!]  Superado el límite de intentos", mtInformation,
+ TMsgDlgButtons() << mbOK, 0);
+
+ exit(0);
+ }
+
+/*
+ *  Función que busca en los arreglos de usuarios y códigos,
+ *  el usuario y código introducido por el usuario.
+ 
+ int login(char user[], char users[MAXUSERS][MAXLEN], int pass,
+ int codes[MAXUSERS]) {
+ int flag = 0;
+
+ // Bucle que recorre el arreglo de usuarios.
+ for (int i = 0; i < MAXUSERS; i++) {
+ // Strcmp compara dos cadenas constantes y retorna 0 si son iguales.
+ if (strcmp(user, users[i]) == 0) {
+
+ // Bucle que recorre el arreglo de códigos.
+ for (int j = 0; j < MAXUSERS; j++) {
+ if (codes[j] == pass) {
+ flag = 1;
+ }
+ }
+ }
+ }
+
+ return flag;
+ }
+ */
+// ---------------------------------------------------------------------------
