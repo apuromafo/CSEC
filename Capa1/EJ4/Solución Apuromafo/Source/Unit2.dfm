@@ -2,7 +2,9 @@ object Form2: TForm2
   Left = 0
   Top = 0
   BorderStyle = bsDialog
-  Caption = 'Ordenando 10 n'#250'meros (m'#233'todo de la burbuja) '
+  Caption = 
+    'Ordenando 10 n'#250'meros (m'#233'todo de la burbuja)  EJ 4 CSEC by Apurom' +
+    'afo'
   ClientHeight = 458
   ClientWidth = 797
   Color = clBtnFace
