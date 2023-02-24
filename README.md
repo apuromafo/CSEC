@@ -1,2 +1,4 @@
-# CSEC
-Aprendiendo en este grupo
+ 
+Aprendiendo en este grupo # CSEC
+
+Lenguaje de Programación : C
