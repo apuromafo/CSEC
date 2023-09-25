@@ -1,2 +1,3 @@
-Pequeñas Creaciones en C /borland C
+## Repositorio C
   
+Creaciones en C/borland C by Apuromafo
