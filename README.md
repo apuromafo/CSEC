@@ -1,4 +1,2 @@
- 
-Aprendiendo en este grupo # CSEC
-
-Lenguaje de Programación : C
+Pequeñas Creaciones en C /borland C
+  
